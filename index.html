@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Community Dashboard • cave222.org</title>
+  <meta name="description" content="A clean, static community dashboard layout for cave222.org — fast, minimal, and GitHub Pages-ready." />
+
+  <!-- Canonical + Favicon -->
+  <link rel="canonical" href="https://cave222.org/" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta name="theme-color" content="#111827" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <div class="brand">
+        <span class="brand__mark" aria-hidden="true">C</span>
+        <div class="brand__text">
+          <div class="brand__name">cave222.org</div>
+          <div class="brand__sub">Community Dashboard</div>
+        </div>
+      </div>
+
+      <div class="topbar__actions">
+        <div class="search">
+          <span class="search__icon" aria-hidden="true">⌕</span>
+          <input class="search__input" type="search" placeholder="Search pages, users, logs…" />
+        </div>
+        <button class="btn btn--soft" type="button">Export</button>
+        <button class="btn" type="button">New Report</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="Sidebar">
+      <nav class="snav">
+        <a class="snav__item snav__item--active" href="#">Overview</a>
+        <a class="snav__item" href="#health">Site health</a>
+        <a class="snav__item" href="#activity">Activity</a>
+        <a class="snav__item" href="#moderation">Moderation</a>
+        <a class="snav__item" href="#reports">Reports</a>
+        <a class="snav__item" href="#settings">Settings</a>
+      </nav>
+
+      <section class="panel">
+        <div class="panel__title">Quick filters</div>
+
+        <label class="field">
+          <span class="field__label">Time range</span>
+          <select class="field__control">
+            <option>Last 7 days</option>
+            <option>Last 28 days</option>
+            <option>Last 90 days</option>
+            <option>This year</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Category</span>
+          <select class="field__control">
+            <option>All</option>
+            <option>Content</option>
+            <option>Users</option>
+            <option>Moderation</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Status</span>
+          <select class="field__control">
+            <option>All</option>
+            <option>Open</option>
+            <option>Resolved</option>
+          </select>
+        </label>
+
+        <div class="hint">
+          Tip: Keep this page lightweight for fast crawl and better UX.
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel__title">Highlights</div>
+        <ul class="mini">
+          <li><span class="dot dot--g"></span> Fast static build</li>
+          <li><span class="dot dot--b"></span> Clean layout</li>
+          <li><span class="dot dot--p"></span> GitHub Pages-ready</li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Main -->
+    <main id="main" class="main">
+      <!-- KPI Cards -->
+      <section class="grid kpis" aria-label="Key metrics">
+        <article class="card kpi">
+          <div class="kpi__label">Pageviews</div>
+          <div class="kpi__value">128,430</div>
+          <div class="kpi__meta"><span class="up">▲ 8.4%</span> vs previous period</div>
+        </article>
+
+        <article class="card kpi">
+          <div class="kpi__label">New users</div>
+          <div class="kpi__value">1,284</div>
+          <div class="kpi__meta"><span class="up">▲ 3.1%</span> vs previous period</div>
+        </article>
+
+        <article class="card kpi">
+          <div class="kpi__label">Edits</div>
+          <div class="kpi__value">9,612</div>
+          <div class="kpi__meta"><span class="down">▼ 1.7%</span> vs previous period</div>
+        </article>
+
+        <article class="card kpi">
+          <div class="kpi__label">Reports</div>
+          <div class="kpi__value">37</div>
+          <div class="kpi__meta"><span class="up">▲ 2</span> new today</div>
+        </article>
+      </section>
+
+      <!-- Two-column widgets -->
+      <section class="grid two">
+        <!-- Chart placeholder -->
+        <article class="card" id="health">
+          <div class="card__head">
+            <h2 class="card__title">Traffic trend</h2>
+            <div class="pill">Last 28 days</div>
+          </div>
+
+          <div class="chart" role="img" aria-label="Placeholder chart">
+            <div class="chart__bar" style="height:35%"></div>
+            <div class="chart__bar" style="height:55%"></div>
+            <div class="chart__bar" style="height:45%"></div>
+            <div class="chart__bar" style="height:70%"></div>
+            <div class="chart__bar" style="height:62%"></div>
+            <div class="chart__bar" style="height:78%"></div>
+            <div class="chart__bar" style="height:66%"></div>
+            <div class="chart__bar" style="height:88%"></div>
+            <div class="chart__bar" style="height:74%"></div>
+            <div class="chart__bar" style="height:92%"></div>
+            <div class="chart__bar" style="height:82%"></div>
+            <div class="chart__bar" style="height:95%"></div>
+          </div>
+
+          <div class="muted small">
+            Replace this chart with real analytics later (or keep it static for speed).
+          </div>
+        </article>
+
+        <!-- Status / tasks -->
+        <article class="card">
+          <div class="card__head">
+            <h2 class="card__title">Site checklist</h2>
+            <div class="pill pill--ok">Healthy</div>
+          </div>
+
+          <ul class="check">
+            <li><span class="tick">✓</span> robots.txt available</li>
+            <li><span class="tick">✓</span> sitemap.xml available</li>
+            <li><span class="tick">✓</span> canonical set</li>
+            <li><span class="tick">✓</span> fast static deployment</li>
+          </ul>
+
+          <div class="actions">
+            <a class="btn btn--soft" href="#reports">View reports</a>
+            <a class="btn" href="#activity">Latest activity</a>
+          </div>
+        </article>
+      </section>
+
+      <!-- Activity table -->
+      <section class="card" id="activity">
+        <div class="card__head">
+          <h2 class="card__title">Recent activity</h2>
+          <div class="pill">Live feed (static demo)</div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Type</th>
+                <th>Item</th>
+                <th>User</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>10:12</td>
+                <td>Edit</td>
+                <td>Airport parking guide</td>
+                <td>@editor01</td>
+                <td><span class="tag tag--ok">Saved</span></td>
+              </tr>
+              <tr>
+                <td>09:41</td>
+                <td>New user</td>
+                <td>Registration</td>
+                <td>@newmember</td>
+                <td><span class="tag tag--info">Verified</span></td>
+              </tr>
+              <tr>
+                <td>08:03</td>
+                <td>Report</td>
+                <td>Spam link detected</td>
+                <td>@modteam</td>
+                <td><span class="tag tag--warn">Open</span></td>
+              </tr>
+              <tr>
+                <td>Yesterday</td>
+                <td>Moderation</td>
+                <td>Removed low-quality page</td>
+                <td>@admin</td>
+                <td><span class="tag tag--ok">Done</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Reports grid -->
+      <section class="grid three" id="reports">
+        <article class="card">
+          <div class="card__head">
+            <h3 class="card__title">Maintenance</h3>
+            <div class="pill">Tools</div>
+          </div>
+          <ul class="links">
+            <li><a href="#">Broken links</a></li>
+            <li><a href="#">Orphaned pages</a></li>
+            <li><a href="#">Duplicate titles</a></li>
+          </ul>
+        </article>
+
+        <article class="card" id="moderation">
+          <div class="card__head">
+            <h3 class="card__title">Moderation</h3>
+            <div class="pill pill--warn">Attention</div>
+          </div>
+          <ul class="links">
+            <li><a href="#">Pending reports</a></li>
+            <li><a href="#">User flags</a></li>
+            <li><a href="#">Blocked list</a></li>
+          </ul>
+        </article>
+
+        <article class="card" id="settings">
+          <div class="card__head">
+            <h3 class="card__title">Settings</h3>
+            <div class="pill">Admin</div>
+          </div>
+          <ul class="links">
+            <li><a href="#">Appearance</a></li>
+            <li><a href="#">Navigation</a></li>
+            <li><a href="#">Permissions</a></li>
+          </ul>
+        </article>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__left">
+          <strong>cave222.org</strong> • Static Dashboard
+          <span class="muted">— built for GitHub Pages</span>
+        </div>
+        <div class="footer__right muted">
+          © <span id="y"></span> cave222.org
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
